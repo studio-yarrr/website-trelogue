@@ -574,15 +574,15 @@ header h1 {
 
 @-webkit-keyframes flip2 {
     0% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 
     5% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     50% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     55% {
@@ -594,21 +594,21 @@ header h1 {
     }
 
     100% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 }
 
 @keyframes flip2 {
     0% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 
     5% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     50% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     55% {
@@ -620,29 +620,29 @@ header h1 {
     }
 
     100% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 }
 
 @-webkit-keyframes flip3 {
     0% {
-        margin-top: -270px;
+        margin-top: -27rem;
     }
 
     5% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 
     33% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 
     38% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     66% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     71% {
@@ -654,29 +654,29 @@ header h1 {
     }
 
     100% {
-        margin-top: -270px;
+        margin-top: -27rem;
     }
 }
 
 @keyframes flip3 {
     0% {
-        margin-top: -270px;
+        margin-top: -27rem;
     }
 
     5% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 
     33% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 
     38% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     66% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     71% {
@@ -688,7 +688,7 @@ header h1 {
     }
 
     100% {
-        margin-top: -270px;
+        margin-top: -27rem;
     }
 }
 
@@ -778,39 +778,39 @@ header h1 {
 
 @-webkit-keyframes flip5 {
     0% {
-        margin-top: -450px;
+        margin-top: -45rem;
     }
 
     5% {
-        margin-top: -360px;
+        margin-top: -36rem;
     }
 
     20% {
-        margin-top: -360px;
+        margin-top: -36rem;
     }
 
     25% {
-        margin-top: -270px;
+        margin-top: -27rem;
     }
 
     40% {
-        margin-top: -270px;
+        margin-top: -27rem;
     }
 
     45% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 
     60% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 
     65% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     80% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     85% {
@@ -822,45 +822,45 @@ header h1 {
     }
 
     100% {
-        margin-top: -450px;
+        margin-top: -45rem;
     }
 }
 
 @keyframes flip5 {
     0% {
-        margin-top: -450px;
+        margin-top: -45rem;
     }
 
     5% {
-        margin-top: -360px;
+        margin-top: -36rem;
     }
 
     20% {
-        margin-top: -360px;
+        margin-top: -36rem;
     }
 
     25% {
-        margin-top: -270px;
+        margin-top: -27rem;
     }
 
     40% {
-        margin-top: -270px;
+        margin-top: -27rem;
     }
 
     45% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 
     60% {
-        margin-top: -180px;
+        margin-top: -18rem;
     }
 
     65% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     80% {
-        margin-top: -90px;
+        margin-top: -9rem;
     }
 
     85% {
@@ -872,7 +872,7 @@ header h1 {
     }
 
     100% {
-        margin-top: -450px;
+        margin-top: -45rem;
     }
 }
 

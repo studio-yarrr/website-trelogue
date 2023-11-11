@@ -10673,18 +10673,18 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: 'power3.Out',
   })
 
-  var marquee = document.querySelector('.marquee');
-  var marqueeText = document.querySelector('.marquee__text');
-  var textWidth = marqueeText.offsetWidth;
+  let marquee = document.querySelector('.marquee');
+  let marqueeText = document.querySelector('.marquee__text');
+  let textWidth = marqueeText.offsetWidth;
 
-  var tl = gsap.timeline({
+  let tl = gsap.timeline({
     repeat: -1,
     defaults: { ease: 'linear' }
   });
 
   tl.to('.marquee', { x: -textWidth, duration: 20, repeat: -1 });
 
-  var swiper = new Swiper(".mySwiper", {
+  let swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     loop: true,
     breakpoints: {
@@ -10699,4 +10699,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  let ulElement = document.querySelector('.header__subtitle ul');
+  let liCount = ulElement.querySelectorAll('li').length;
+
+  ulElement.classList.remove('flip2', 'flip3', 'flip4', 'flip5');
+
+  switch(liCount) {
+      case 2: ulElement.classList.add('flip2'); break;
+      case 3: ulElement.classList.add('flip3'); break;
+      case 4: ulElement.classList.add('flip4'); break;
+      default: ulElement.classList.add('flip5'); break;
+  }
 })
