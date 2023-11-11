@@ -1,0 +1,338 @@
+.split {
+	position: relative;
+	display: flex;
+	background: #000;
+	margin-top: 6rem;
+}
+
+.split .screen {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	flex-grow: 1;
+	overflow: hidden;
+	transition: 750ms;
+}
+
+.split:hover .screen {
+	opacity: 0.25;
+	filter: saturate(50%);
+}
+
+.split .screen:hover {
+	flex-grow: 3;
+	opacity: 1;
+	filter: saturate(100%);
+}
+
+.split {
+	.screen {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.split .screen .content {
+	position: absolute;
+	width: 50ch;
+	height: auto;
+	background: rgba(255, 255, 255, 0.75);
+	padding: 2.5rem;
+	transform: translateX(100%);
+	backdrop-filter: blur(12.5px);
+	-webkit-backdrop-filter: blur(12.5px);
+	transition: 750ms;
+	color: #000;
+}
+
+.split .screen:hover .content {
+	transform: translateX(0);
+	transition-delay: 500ms;
+}
+
+.split .screen .content h2 {
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.split .screen .content p {
+	line-height: 1.5;
+	font-size: 1.3rem;
+	margin-top: 1rem;
+}
+
+
+.main-text {
+	padding: 5rem 7rem;
+
+	@include breakpoint($xl-bp) {
+		padding: 3rem;
+	}
+
+	@include breakpoint($sm-bp) {
+		padding: 2rem 3rem;
+	}
+
+	p {
+		font-size: 2rem;
+		font-family: "JoannaSansNova";
+		line-height: 120%;
+
+		@include breakpoint($sm-bp) {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.marquee-container {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.marquee {
+	display: flex;
+	padding-left: 2rem;
+	width: calc(100% * 2);
+
+}
+
+.marquee .marquee__text {
+	will-change: transform;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	font-family: "JoannaSansNova";
+	font-size: 7rem;
+	line-height: 100%;
+	font-weight: 400;
+	background: rgb(235, 235, 236);
+	padding-bottom: 2rem;
+	padding-top: 1rem;
+
+	@include breakpoint($sm-bp) {
+		font-size: 3rem;
+		gap: 1rem;
+		padding-bottom: 1.3rem;
+	}
+
+	.--bold {
+		font-family: "JoannaSansNova";
+		font-weight: 600;
+	}
+
+}
+
+.bread-crumbs {
+	padding: 3rem 8rem 0rem;
+
+	@include breakpoint($xl-bp) {
+		padding: 3rem 3rem 0rem;
+	}
+
+	@include breakpoint($sm-bp) {
+		padding: 1rem 3rem 0rem;
+	}
+
+	a {
+		font-family: "JoannaSansNova";
+		font-size: 2.3rem;
+		line-height: 110%;
+		color: #000;
+		width: max-content;
+
+		@include breakpoint($sm-bp) {
+			font-size: 2rem;
+		}
+	}
+}
+
+.main-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 6rem;
+	padding: 9rem 8rem;
+
+	@include breakpoint($xl-bp) {
+		padding: 4rem 3rem;
+	}
+
+	@include breakpoint($sm-bp) {
+		gap: 3rem;
+		padding: 2rem 3rem;
+	}
+}
+
+.main-cards__inner {
+
+	transform: rotate(-4deg);
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-template-rows: repeat(4, auto);
+	column-gap: 5rem;
+
+	@include breakpoint($sm-bp) {
+		column-gap: 1rem;
+		transform: rotate(-2deg);
+	}
+
+	h2 {
+		font-family: "JoannaSansNova";
+		font-size: 3.2rem;
+		text-transform: uppercase;
+		font-weight: 600;
+		grid-area: 1 / 2 / 2 / 3;
+
+		@include breakpoint($sm-bp) {
+			font-size: 1.8rem;
+		}
+	}
+
+	ul {
+		margin-top: 5rem;
+		grid-area: 4 / 2 / 5 / 3;
+
+		@include breakpoint($sm-bp) {
+			grid-area: 3 / 2 / 4 / 3;
+			margin-top: 1rem;
+		}
+
+		li {
+			font-family: "JoannaSansNova";
+			font-size: 1.8rem;
+			line-height: 120%;
+
+			@include breakpoint($sm-bp) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+.main-cards__img {
+	width: 45rem;
+	grid-area: 1 / 1 / 5 / 2;
+
+	@include breakpoint($xl-bp) {
+		width: 35rem;
+	}
+
+	@include breakpoint($sm-bp) {
+		grid-area: 1 / 1 / 4 / 2;
+		width: 16rem;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+
+.main-card__date {
+	margin-top: 2rem;
+	font-family: "JoannaSansNova";
+	font-size: 1.8rem;
+	grid-area: 2 / 2 / 3 / 3;
+
+	@include breakpoint($sm-bp) {
+		font-size: 1.2rem;
+		margin-top: 1rem;
+	}
+}
+
+.main-card__text {
+	display: flex;
+	font-family: "JoannaSansNova";
+	font-size: 1.8rem;
+	line-height: 120%;
+	margin-top: 5rem;
+	width: 50%;
+	padding-left: 5rem;
+	grid-area: 3 / 2 / 4 / 3;
+
+	@include breakpoint($xl-bp) {
+		width: 100%;
+	}
+
+	@include breakpoint($sm-bp) {
+		grid-area: 4 / 1 / 5 / 3;
+		padding-left: 0rem;
+		margin-top: 1rem;
+		font-size: 1.2rem;
+	}
+
+	a {
+		font-family: "JoannaSansNova";
+		display: inline;
+		color: #000;
+		font-weight: 600;
+	}
+}
+
+.main-card__more-cards {
+	font-family: "JoannaSansNova";
+	margin-top: 6rem;
+	width: max-content;
+	margin-left: 47%;
+	font-size: 3.4rem;
+	font-weight: 600;
+	line-height: 110%;
+	transform: rotate(-4deg);
+	background: none;
+	border: none;
+
+	@include breakpoint($xl-bp) {
+		margin-top: 2rem;
+		margin-left: auto;
+	}
+
+	@include breakpoint($sm-bp) {
+		margin-top: 0rem;
+		font-size: 2rem;
+		margin-right: auto;
+	}
+}
+
+.rights {
+	margin-top: 10rem;
+	background: rgb(133, 133, 133);
+	height: 13rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	clip-path: polygon(0 80%, 100% 0, 100% 100%, 0% 100%);
+
+	@include breakpoint($xl-bp) {
+		margin-top: 5rem;
+	}
+
+	@include breakpoint($sm-bp) {
+		height: 5rem;
+		margin-top: 3rem;
+		clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%);
+		justify-content: flex-end;
+		padding-right: 3rem;
+	}
+
+	p {
+		font-family: "JoannaSansNova";
+		font-size: 2.6rem;
+		line-height: 110%;
+		transform: rotate(-4deg);
+		color: #FFFFFF;
+		margin-top: 4rem;
+
+		@include breakpoint($sm-bp) {
+			font-size: 1.6rem;
+			margin-top: 0rem;
+		}
+	}
+}
