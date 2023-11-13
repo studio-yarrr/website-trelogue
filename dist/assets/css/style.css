@@ -542,7 +542,7 @@ header h1 {
 .header__subtitle div {
     overflow: hidden;
     position: relative;
-    height: 4rem;
+    height: 5.5rem;
 }
 
 .header__subtitle div li {
