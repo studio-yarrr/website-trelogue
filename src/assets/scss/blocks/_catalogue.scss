@@ -1,0 +1,53 @@
+.catalogue-tabs {
+    padding: 10rem 8rem 4rem 8rem;
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint($xl-bp) {
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 5rem 3rem 4rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        gap: 1rem;
+        padding: 3rem;
+    }
+
+    button {
+        background: none;
+        border: none;
+        font-family: "JoannaSansNova";
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        transition: all 0.2s linear;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.6rem;
+        }
+
+        &.--active {
+            -webkit-text-stroke: 0.1rem black;
+        }
+    }
+}
+
+.catalogue-tabs__container {
+    transition: opacity 0.3s ease;
+}
+
+.catalogue-tabs__container.fading-out {
+    opacity: 0;
+}
+
+.catalogue-tabs__container.fading-in {
+    opacity: 1;
+}
+
+.catalogue-tabs__content {
+    display: none;
+}

@@ -54,258 +54,100 @@
 
         <main>
 
-            <header>
-                <h1 data-splitting>trelogue</h1>
-                <div class="header__subtitle">
-                    <span>italian</span>
-                    <div>
-                        <ul>
-                            <li>materials</li>
-                            <li>wood</li>
-                            <li>glass</li>
-                            <li>iron</li>
-                        </ul>
-                    </div>
-                </div>
-            </header>
+            <!DOCTYPE html>
+            <html lang="en">
             
-            <!-- <section class="split">
-            	<div class="screen">
-            		<img src="https://images.unsplash.com/photo-1560092680-21bd606d2c08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            			alt="#">
-            		<div class="content">
-            			<h2>Metro Station</h2>
-            			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit rutrum lectus ut
-            				pellentesque. Suspendisse convallis dignissim tempor. Vestibulum sed vestibulum odio. Proin lobortis
-            				sagittis.</p>
-            		</div>
-            	</div>
-            	<div class="screen">
-            		<img src="https://images.unsplash.com/photo-1550064562-7c8519549258?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80"
-            			alt="#">
-            		<div class="content">
-            			<h2>A Lonely Sign</h2>
-            			<p>Proin convallis libero a odio efficitur mollis. Fusce consectetur tempus lacus id suscipit. Curabitur sit
-            				amet ante lacinia, tempus magna vitae, volutpat elit. Lorem ipsum dolor sit amet, consectetur
-            				adipiscing.</p>
-            		</div>
-            	</div>
-            	<div class="screen">
-            		<img src="https://images.unsplash.com/photo-1556828520-39687e44ff64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            			alt="#">
-            		<div class="content">
-            			<h2>Waiting Queue</h2>
-            			<p>Nam ut risus consequat, dictum diam gravida, viverra urna. Duis sollicitudin ante ac elit volutpat, vitae
-            				luctus turpis ornare. Quisque enim dolor, euismod ac ipsum sit amet, placerat porta lectus.</p>
-            		</div>
-            	</div>
-            </section> -->
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+            </head>
             
+            <body>
+                <style>
+                    .rounded {
+                        counter-reset: li;
+                        list-style: none;
+                        font: 22px "Trebuchet MS", "Lucida Sans";
+                        padding: 0;
+                        text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+                        width: 40%;
+                        margin: 0 auto;
+                        margin-top: 200px;
+                        margin-bottom: 200px;
+                    }
             
-            <section class="swiper mySwiper">
-            	<div class="swiper-wrapper split">
-            		<div class="swiper-slide">
-            			<div class="screen">
-            				<img src="https://images.unsplash.com/photo-1560092680-21bd606d2c08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            					alt="#">
-            				<a href="#" class="content">
-            					<h2>Metro Station</h2>
-            					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit rutrum lectus ut
-            						pellentesque. Suspendisse convallis dignissim tempor. Vestibulum sed vestibulum odio. Proin
-            						lobortis
-            						sagittis.</p>
-            				</a>
-            			</div>
-            		</div>
-            		<div class="swiper-slide">
-            			<div class="screen">
-            				<img src="https://images.unsplash.com/photo-1550064562-7c8519549258?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80"
-            					alt="#">
-            				<a href="#" class="content">
-            					<h2>A Lonely Sign</h2>
-            					<p>Proin convallis libero a odio efficitur mollis. Fusce consectetur tempus lacus id suscipit.
-            						Curabitur sit
-            						amet ante lacinia, tempus magna vitae, volutpat elit. Lorem ipsum dolor sit amet, consectetur
-            						adipiscing.</p>
-            				</a>
-            			</div>
-            		</div>
-            		<div class="swiper-slide">
-            			<div class="screen">
-            				<img src="https://images.unsplash.com/photo-1556828520-39687e44ff64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            					alt="#">
-            				<a href="#" class="content">
-            					<h2>Waiting Queue</h2>
-            					<p>Nam ut risus consequat, dictum diam gravida, viverra urna. Duis sollicitudin ante ac elit
-            						volutpat, vitae
-            						luctus turpis ornare. Quisque enim dolor, euismod ac ipsum sit amet, placerat porta lectus.</p>
-            				</a>
-            			</div>
-            		</div>
-            		<div class="swiper-slide">
-            			<div class="screen">
-            				<img src="https://images.unsplash.com/photo-1556828520-39687e44ff64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            					alt="#">
-            				<a href="#" class="content">
-            					<h2>Waiting Queue</h2>
-            					<p>Nam ut risus consequat, dictum diam gravida, viverra urna. Duis sollicitudin ante ac elit
-            						volutpat, vitae
-            						luctus turpis ornare. Quisque enim dolor, euismod ac ipsum sit amet, placerat porta lectus.</p>
-            				</a>
-            			</div>
-            		</div>
-            		<div class="swiper-slide">
-            			<div class="screen">
-            				<img src="https://images.unsplash.com/photo-1556828520-39687e44ff64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            					alt="#">
-            				<a href="#" class="content">
-            					<h2>Waiting Queue</h2>
-            					<p>Nam ut risus consequat, dictum diam gravida, viverra urna. Duis sollicitudin ante ac elit
-            						volutpat, vitae
-            						luctus turpis ornare. Quisque enim dolor, euismod ac ipsum sit amet, placerat porta lectus.</p>
-            				</a>
-            			</div>
-            		</div>
-            	</div>
-            </section>
+                    @media (max-width: 1024px) {
+                        .rounded {
+                        width: 80%;
+                        font: 18px "Trebuchet MS", "Lucida Sans";
+                        margin-top: 100px;
+                        }
+                    }
             
+                    @media (max-width: 900px) {
+                        .rounded {
+                        width: 80%;
+                        font: 18px "Trebuchet MS", "Lucida Sans";
+                        }
+                    }
             
-            <div class="main-text">
-            	<p>
-            		В мире света, мебели и материалов невозможно обойтись без чувства дизайна своего или профессионального
-            		дизайнера
-            		интерьеров, чей горизонт вкусов, может быть и, проверен временем, но бесконечно узок и не в состоянии
-            		воплотить
-            		концепцию пространства резидентского или коммерческого как части внутреннего мира его мастера. Treluce - это
-            		информация о светильниках, предметах мебели и материалах, связанных с дизайном от итальянских производителей
-            		из
-            		первых рук. Без AI.
-            	</p>
-            </div>
+                    .rounded a {
+                        position: relative;
+                        display: block;
+                        padding: .4em .4em .4em 2em;
+                        margin: .5em 0;
+                        background: #DAD2CA;
+                        color: #444;
+                        text-decoration: none;
+                        border-radius: .3em;
+                        transition: .3s ease-out;
+                    }
             
-            <div class="marquee-container">
-            	<div class="marquee">
-            		<div class="marquee__text">
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            		</div>
+                    .rounded a:hover {
+                        background: #E9E4E0;
+                    }
             
-            		<div class="marquee__text">
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            			<span>PRISM</span>
-            			<span class="--bold">PRISM</span>
-            		</div>
-            	</div>
-            </div>
+                    li {
+                        transition: all 0.2s linear;
+                    }
             
-            <div class="bread-crumbs">
-            	<a href="#">главная</a>
-            </div>
+                    li:hover {
+                        transform: translate(-25px, 0%);
+                        transition: all 0.2s linear;
+                    }
             
-            <div class="main-cards">
-            	<div class="main-cards__inner">
-            		<div class="main-cards__img">
-            			<img src="https://images.unsplash.com/photo-1550064562-7c8519549258?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80"
-            				alt="#">
-            		</div>
+                    /* .rounded a:hover:before {
+                        transform: rotate(360deg);
+                    } */
             
-            		<h2>Заголовок</h2>
-            		<div class="main-card__date">
-            			дата публикации: 15 сентября 2023
-            		</div>
+                    .rounded a:before {
+                        content: counter(li);
+                        counter-increment: li;
+                        position: absolute;
+                        left: -1.3em;
+                        top: 50%;
+                        margin-top: -1.3em;
+                        background: #8FD4C1;
+                        height: 2em;
+                        width: 2em;
+                        line-height: 2em;
+                        border: .3em solid white;
+                        text-align: center;
+                        font-weight: bold;
+                        border-radius: 2em;
+                        transition: all .3s ease-out;
+                    }
+                </style>
+                <ol class="rounded">
+                    <li><a href="./main.html">Главная</a></li>
+                    <li><a href="./item.html">item</a></li>
+                    <li><a href="./catalogue.html">catalogue</a></li>
+                </ol>
+            </body>
             
-            		<div class="main-card__text">
-            			<p>
-            				"Fregio - это результат исследования отношений между светом и объемом", - отмечает дизайнер
-            				Andrea
-            				Anastasio. "На протяжении столетий барельефные панно украшали жилые интерьеры или экстерьеры
-            				домов и
-            				дворцов,практически <a href="#">читать дальше</a>
-            			</p>
-            		</div>
-            
-            		<ul>
-            			<li>раздел: свет</li>
-            			<li>подраздел: подвесной светильник</li>
-            		</ul>
-            	</div>
-            
-            	<div class="main-cards__inner">
-            		<div class="main-cards__img">
-            			<img src="https://images.unsplash.com/photo-1550064562-7c8519549258?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80"
-            				alt="#">
-            		</div>
-            
-            		<h2>Заголовок</h2>
-            		<div class="main-card__date">
-            			дата публикации: 15 сентября 2023
-            		</div>
-            
-            		<div class="main-card__text">
-            			<p>
-            				"Fregio - это результат исследования отношений между светом и объемом", - отмечает дизайнер
-            				Andrea
-            				Anastasio. "На протяжении столетий барельефные панно украшали жилые интерьеры или экстерьеры
-            				домов и
-            				дворцов,практически <a href="#">читать дальше</a>
-            			</p>
-            		</div>
-            
-            		<ul>
-            			<li>раздел: свет</li>
-            			<li>подраздел: подвесной светильник</li>
-            		</ul>
-            	</div>
-            
-            	<button class="main-card__more-cards">
-            		еще публикации
-            	</button>
-            </div>
-            
-            <div class="rights">
-            	<p>Все права защищены (с)</p>
-            </div>
-            
-            
+            </html>
 
         </main>
 

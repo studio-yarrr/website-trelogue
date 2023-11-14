@@ -1,0 +1,95 @@
+.item-article {
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include breakpoint($xl-bp) {
+        padding: 3rem;
+        gap: 3rem;
+    }
+}
+
+.item-article__title {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+        font-family: "JoannaSansNova";
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        grid-area: 1 / 2 / 2 / 3;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.8rem;
+        }
+    }
+
+
+}
+
+.item-article__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+
+    @include breakpoint($xl-bp) {
+        gap: 3rem;
+    }
+}
+
+.item-article__date {
+    margin-top: 2rem;
+    font-family: "JoannaSansNova";
+    font-size: 1.8rem;
+    grid-area: 2 / 2 / 3 / 3;
+
+    @include breakpoint($sm-bp) {
+        font-size: 1.2rem;
+    }
+}
+
+.item-article__text {
+    display: flex;
+    font-family: "JoannaSansNova";
+    font-size: 1.8rem;
+    line-height: 120%;
+    padding-left: 5rem;
+    flex-direction: column;
+    gap: 2rem;
+    color: #000000ab;
+
+    @include breakpoint($sm-bp) {
+        padding-left: 0rem;
+        font-size: 1.2rem;
+    }
+
+    ul {
+        padding-left: 1rem;
+
+        li {
+            font-style: italic;
+        }
+    }
+
+}
+
+.item-article__questions {
+    display: flex;
+    font-family: "JoannaSansNova";
+    font-size: 1.8rem;
+    line-height: 120%;
+
+    @include breakpoint($sm-bp) {
+        text-align: end;
+        font-size: 1.2rem;
+    }
+    
+
+    a {
+        display: inline;
+        font-weight: 600;
+        color: #000;
+    }
+}
