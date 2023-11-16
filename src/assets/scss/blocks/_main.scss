@@ -17,42 +17,42 @@
 	flex-grow: 1;
 	overflow: hidden;
 	transition: 750ms;
-	
+
 }
 
 .split:hover .screen {
 	opacity: 0.25;
 	filter: saturate(50%);
-	
+
 }
 
 .split .screen:hover {
 	flex-grow: 3;
 	opacity: 1;
 	filter: saturate(100%);
-	
+
 }
 
 section .screen:hover {
-    flex-grow: 3;
-    transform: scale(1.2);
-    z-index: 2;
-	
+	flex-grow: 3;
+	transform: scale(1.2);
+	z-index: 2;
+
 }
 
 /* Смещение соседних слайдов */
-section .screen:hover ~ .screen {
-    transform: translateX(10rem);
+section .screen:hover~.screen {
+	transform: translateX(10rem);
 }
 
-section .screen:hover ~ .screen {
-    transform: translateX(-10rem);
+section .screen:hover~.screen {
+	transform: translateX(-10rem);
 }
 
 /* Добавьте плавные переходы */
 section .screen {
-    transition: transform 750ms, flex-grow 750ms;
-	
+	transition: transform 750ms, flex-grow 750ms;
+
 }
 
 .split {
@@ -68,7 +68,7 @@ section .screen {
 .split .screen .content {
 	position: absolute;
 	width: 50ch;
-	height: auto;
+	height: 40%;
 	background: rgba(255, 255, 255, 0.75);
 	padding: 2.5rem;
 	transform: translateX(100%);
@@ -79,8 +79,16 @@ section .screen {
 }
 
 .split .screen:hover .content {
-	transform: translateX(0);
+	transform: translate(0%, -16%);
 	transition-delay: 500ms;
+
+	@include breakpoint($xl-bp) {
+		transform: translate(-13%, -13%);
+	}
+
+	@include breakpoint($sm-bp) {
+		transform: translate(-10%, -13%);
+	}
 }
 
 .split .screen .content h2 {
@@ -291,7 +299,7 @@ section .screen {
 	width: 65%;
 	padding-left: 5rem;
 	grid-area: 3 / 2 / 4 / 3;
-	color: rgba(0,0,0,.6705882353);
+	color: rgba(0, 0, 0, .6705882353);
 
 	@include breakpoint($xl-bp) {
 		width: 100%;
@@ -335,13 +343,3 @@ section .screen {
 		margin-right: auto;
 	}
 }
-
-
-
-
-
-
-
-
-
-
