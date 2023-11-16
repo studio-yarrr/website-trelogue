@@ -1,5 +1,7 @@
 .item-article {
-    padding: 10rem;
+    padding-top: 10rem;
+    padding-left: 11rem;
+    padding-right: 13rem;
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -34,15 +36,17 @@
     flex-direction: column;
     gap: 10rem;
 
+
     @include breakpoint($xl-bp) {
         gap: 3rem;
     }
 }
 
 .item-article__date {
-    margin-top: 2rem;
     font-family: "JoannaSansNova";
-    font-size: 1.8rem;
+    display: flex;
+    align-items: end;
+    font-size: 2.3rem;
     grid-area: 2 / 2 / 3 / 3;
 
     @include breakpoint($sm-bp) {
@@ -53,7 +57,7 @@
 .item-article__text {
     display: flex;
     font-family: "JoannaSansNova";
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     line-height: 120%;
     padding-left: 5rem;
     flex-direction: column;
@@ -78,18 +82,170 @@
 .item-article__questions {
     display: flex;
     font-family: "JoannaSansNova";
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     line-height: 120%;
+    margin-top: 8rem;
 
     @include breakpoint($sm-bp) {
         text-align: end;
         font-size: 1.2rem;
+        margin-top: 4rem;
     }
-    
+
 
     a {
         display: inline;
         font-weight: 600;
         color: #000;
+    }
+}
+
+.item-swiper__container {
+    position: relative;
+    width: 100%;
+    height: 67rem;
+    margin-top: 6rem;
+
+    @include breakpoint($xl-bp) {
+        height: 50rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        margin-top: 2rem;
+        height: 25rem;
+    }
+}
+
+.item-swiper__background-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.itemSwiper {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+}
+
+.panel,
+.panel-container {
+    width: 100%;
+    height: 100%;
+}
+
+.panel-container {
+    position: absolute;
+    background-size: cover;
+    transform: perspective(40rem) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.panel-content {
+    color: #FFFFFF;
+    transform: translateZ(8rem) scale(.8);
+    transform-style: preserve-3d;
+    overflow-wrap: break-word;
+    padding-left: 7rem;
+    margin-top: 4rem;
+
+    @include breakpoint($xl-bp) {
+        padding-left: 2rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        margin-top: 0rem;
+        padding-left: 1rem;
+    }
+
+    h2 {
+        font-family: "JoannaSansNova";
+        font-size: 4rem;
+        line-height: 120%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+    }
+
+    p {
+        font-family: "JoannaSansNova";
+        font-size: 2rem;
+        line-height: 120%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.item-swiper-button-prev,
+.item-swiper-button-next {
+    position: absolute;
+    width: 3.4rem;
+    height: 5.4rem;
+    z-index: 5;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: none;
+    padding: 0rem;
+    border: none;
+    top: 40%;
+    opacity: 0.6;
+    transition: all 0.2s linear;
+
+    @include breakpoint($sm-bp) {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    svg {
+        height: 100%;
+        width: 100%;
+        fill: #FFFFFF;
+    }
+}
+
+.item-swiper-button-prev {
+    left: 25%;
+    rotate: 90deg;
+
+    @include breakpoint($sm-bp) {
+        left: 0.5rem;
+    }
+}
+
+.item-swiper-button-next {
+    right: 25%;
+    rotate: -90deg;
+
+    @include breakpoint($sm-bp) {
+        right: 0.5rem;
     }
 }

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
     --black: #000;
     --white: #FFF;
@@ -19,10 +21,17 @@
 }
 
 @font-face {
-    font-family: "JoannaSansNovaItalic";
+    font-family: "JoannaSansNova";
   src: url("../fonts/JoannaSansNovaItalic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
+}
+
+@font-face {
+    font-family: "JoannaSansNova";
+  src: url("../fonts/JoannaSansNovaThin.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
 }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
@@ -503,15 +512,23 @@ header {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
     -ms-flex-align: center;
     align-items: center;
+    margin-top: 9rem;
+}
+
+@media (max-width: 1024px) {
+    header {
+        margin-top: 6rem;
+    }
 }
 
 @media (max-width: 500px) {
     header {
-        padding: 3rem 3rem 0rem 3rem;
+        padding: 0rem 3rem 0rem 3rem;
         gap: 1rem;
+        margin-top: 3rem;
     }
 }
 
@@ -968,7 +985,11 @@ header h1 {
     display: -ms-flexbox;
     display: flex;
     background: #000;
+}
+
+.mySwiper {
     margin-top: 6rem;
+    background: rgba(255, 255, 255, 0.75);
 }
 
 .split .screen {
@@ -997,6 +1018,32 @@ header h1 {
     opacity: 1;
     -webkit-filter: saturate(100%);
     filter: saturate(100%);
+}
+
+section .screen:hover {
+    -ms-flex-positive: 3;
+    flex-grow: 3;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+/* Смещение соседних слайдов */
+section .screen:hover ~ .screen {
+    -webkit-transform: translateX(10rem);
+    transform: translateX(10rem);
+}
+
+section .screen:hover ~ .screen {
+    -webkit-transform: translateX(-10rem);
+    transform: translateX(-10rem);
+}
+
+/* Добавьте плавные переходы */
+section .screen {
+    transition: flex-grow 750ms, -webkit-transform 750ms;
+    transition: transform 750ms, flex-grow 750ms;
+    transition: transform 750ms, flex-grow 750ms, -webkit-transform 750ms, -ms-flex-positive 750ms;
 }
 
 .split .screen img {
@@ -1055,7 +1102,7 @@ header h1 {
 }
 
 .main-text p {
-    font-size: 2rem;
+    font-size: 2.8rem;
     font-family: "JoannaSansNova";
     line-height: 120%;
 }
@@ -1090,7 +1137,7 @@ header h1 {
     font-family: "JoannaSansNova";
     font-size: 7rem;
     line-height: 100%;
-    font-weight: 400;
+    font-weight: 200;
     background: rgb(235, 235, 236);
     padding-bottom: 2rem;
     padding-top: 1rem;
@@ -1119,7 +1166,7 @@ header h1 {
     flex-wrap: wrap;
     padding: 3rem 8rem 0rem;
     font-family: "JoannaSansNova";
-    font-size: 2.3rem;
+    font-size: 3rem;
     line-height: 110%;
     color: #000;
 }
@@ -1149,7 +1196,7 @@ header h1 {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 6rem;
-    padding: 9rem 8rem;
+    padding: 9rem 8rem 0rem 8rem;
 }
 
 @media (max-width: 1024px) {
@@ -1188,7 +1235,7 @@ header h1 {
 
 .main-cards__inner h2 {
     font-family: "JoannaSansNova";
-    font-size: 3.2rem;
+    font-size: 3.3rem;
     text-transform: uppercase;
     font-weight: 600;
     grid-area: 1/2/2/3;
@@ -1214,7 +1261,7 @@ header h1 {
 
 .main-cards__inner ul li {
     font-family: "JoannaSansNova";
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     line-height: 120%;
 }
 
@@ -1252,7 +1299,7 @@ header h1 {
 .main-card__date {
     margin-top: 2rem;
     font-family: "JoannaSansNova";
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     grid-area: 2/2/3/3;
 }
 
@@ -1267,10 +1314,10 @@ header h1 {
     display: -ms-flexbox;
     display: flex;
     font-family: "JoannaSansNova";
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     line-height: 120%;
     margin-top: 5rem;
-    width: 50%;
+    width: 65%;
     padding-left: 5rem;
     grid-area: 3/2/4/3;
     color: rgba(0, 0, 0, 0.6705882353);
@@ -1329,7 +1376,9 @@ header h1 {
 }
 
 .item-article {
-    padding: 10rem;
+    padding-top: 10rem;
+    padding-left: 11rem;
+    padding-right: 13rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1380,9 +1429,12 @@ header h1 {
 }
 
 .item-article__date {
-    margin-top: 2rem;
     font-family: "JoannaSansNova";
-    font-size: 1.8rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: end;
+    font-size: 2.3rem;
     grid-area: 2/2/3/3;
 }
 
@@ -1396,7 +1448,7 @@ header h1 {
     display: -ms-flexbox;
     display: flex;
     font-family: "JoannaSansNova";
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     line-height: 120%;
     padding-left: 5rem;
     -ms-flex-direction: column;
@@ -1424,14 +1476,16 @@ header h1 {
     display: -ms-flexbox;
     display: flex;
     font-family: "JoannaSansNova";
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     line-height: 120%;
+    margin-top: 8rem;
 }
 
 @media (max-width: 500px) {
     .item-article__questions {
         text-align: end;
         font-size: 1.2rem;
+        margin-top: 4rem;
     }
 }
 
@@ -1439,6 +1493,189 @@ header h1 {
     display: inline;
     font-weight: 600;
     color: #000;
+}
+
+.item-swiper__container {
+    position: relative;
+    width: 100%;
+    height: 67rem;
+    margin-top: 6rem;
+}
+
+@media (max-width: 1024px) {
+    .item-swiper__container {
+        height: 50rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .item-swiper__container {
+        margin-top: 2rem;
+        height: 25rem;
+    }
+}
+
+.item-swiper__background-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.itemSwiper {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+}
+
+.panel,
+.panel-container {
+    width: 100%;
+    height: 100%;
+}
+
+.panel-container {
+    position: absolute;
+    background-size: cover;
+    -webkit-transform: perspective(40rem) rotateX(0deg) rotateY(0deg);
+    transform: perspective(40rem) rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.panel-content {
+    color: #FFFFFF;
+    -webkit-transform: translateZ(8rem) scale(0.8);
+    transform: translateZ(8rem) scale(0.8);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    overflow-wrap: break-word;
+    padding-left: 7rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 1024px) {
+    .panel-content {
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .panel-content {
+        margin-top: 0rem;
+        padding-left: 1rem;
+    }
+}
+
+.panel-content h2 {
+    font-family: "JoannaSansNova";
+    font-size: 4rem;
+    line-height: 120%;
+}
+
+@media (max-width: 500px) {
+    .panel-content h2 {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+}
+
+.panel-content p {
+    font-family: "JoannaSansNova";
+    font-size: 2rem;
+    line-height: 120%;
+}
+
+@media (max-width: 500px) {
+    .panel-content p {
+        font-size: 1.2rem;
+    }
+}
+
+.item-swiper-button-prev,
+.item-swiper-button-next {
+    position: absolute;
+    width: 3.4rem;
+    height: 5.4rem;
+    z-index: 5;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: none;
+    padding: 0rem;
+    border: none;
+    top: 40%;
+    opacity: 0.6;
+    transition: all 0.2s linear;
+}
+
+@media (max-width: 500px) {
+    .item-swiper-button-prev,
+.item-swiper-button-next {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.item-swiper-button-prev:hover,
+.item-swiper-button-next:hover {
+    opacity: 1;
+}
+
+.item-swiper-button-prev svg,
+.item-swiper-button-next svg {
+    height: 100%;
+    width: 100%;
+    fill: #FFFFFF;
+}
+
+.item-swiper-button-prev {
+    left: 25%;
+    rotate: 90deg;
+}
+
+@media (max-width: 500px) {
+    .item-swiper-button-prev {
+        left: 0.5rem;
+    }
+}
+
+.item-swiper-button-next {
+    right: 25%;
+    rotate: -90deg;
+}
+
+@media (max-width: 500px) {
+    .item-swiper-button-next {
+        right: 0.5rem;
+    }
 }
 
 .catalogue-tabs {
