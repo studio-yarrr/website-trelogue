@@ -10689,20 +10689,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    loop: true,
-    breakpoints: {
 
-      500: {
-        slidesPerView: 2,
-      },
 
-      1024: {
-        slidesPerView: 3,
-      },
-    }
-  });
+  if (window.matchMedia("(max-width: 500px)").matches) {
+    document.querySelectorAll('.screen').forEach(e => {
+      e.classList.add('swiper-slide')
+    })
+    document.querySelector('.split').classList.add('swiper-wrapper')
+    document.querySelector('.split').parentElement.classList.add('swiper')
+    document.querySelector('.split').parentElement.classList.add('split-swiper')
+
+    let swiper = new Swiper(".split-swiper", {
+      slidesPerView: 1,
+    });
+  }
 
   const swiper2 = new Swiper('.itemSwiper', {
     centeredSlides: true,
@@ -10771,43 +10771,43 @@ document.addEventListener("DOMContentLoaded", () => {
   const panels = document.querySelectorAll(".panel");
 
   panels.forEach(panel => {
-      const panelContainer = panel.querySelector(".panel-container");
-  
-      panel.addEventListener('mousemove', (e) => transformPanel(e, panel, panelContainer));
-      panel.addEventListener('mouseenter', () => handleMouseEnter(panelContainer));
-      panel.addEventListener('mouseleave', () => handleMouseLeave(panelContainer));
+    const panelContainer = panel.querySelector(".panel-container");
+
+    panel.addEventListener('mousemove', (e) => transformPanel(e, panel, panelContainer));
+    panel.addEventListener('mouseenter', () => handleMouseEnter(panelContainer));
+    panel.addEventListener('mouseleave', () => handleMouseLeave(panelContainer));
   });
-  
+
   function transformPanel(mouseEvent, panel, panelContainer) {
-      if (panel.closest('.swiper-slide').classList.contains('swiper-slide-active')) {
-          const rect = panel.getBoundingClientRect();
-          const centerX = rect.left + rect.width / 2;
-          const centerY = rect.top + rect.height / 2;
-          const mouseX = mouseEvent.clientX;
-          const mouseY = mouseEvent.clientY;
-          const percentX = (mouseX - centerX) / (rect.width / 2);
-          const percentY = -((mouseY - centerY) / (rect.height / 2));
-          const transformAmount = 10;
-  
-          panelContainer.style.transform = `perspective(40rem) rotateY(${percentX * transformAmount}deg) rotateX(${percentY * transformAmount}deg)`;
-      }
+    if (panel.closest('.swiper-slide').classList.contains('swiper-slide-active')) {
+      const rect = panel.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const mouseX = mouseEvent.clientX;
+      const mouseY = mouseEvent.clientY;
+      const percentX = (mouseX - centerX) / (rect.width / 2);
+      const percentY = -((mouseY - centerY) / (rect.height / 2));
+      const transformAmount = 10;
+
+      panelContainer.style.transform = `perspective(40rem) rotateY(${percentX * transformAmount}deg) rotateX(${percentY * transformAmount}deg)`;
+    }
   }
-  
+
   function handleMouseEnter(panelContainer) {
-      if (panelContainer.closest('.swiper-slide').classList.contains('swiper-slide-active')) {
-          panelContainer.style.transition = '';
-      }
+    if (panelContainer.closest('.swiper-slide').classList.contains('swiper-slide-active')) {
+      panelContainer.style.transition = '';
+    }
   }
-  
+
   function handleMouseLeave(panelContainer) {
-      if (panelContainer.closest('.swiper-slide').classList.contains('swiper-slide-active')) {
-          panelContainer.style.transition = 'transform 0.5s ease-out';
-          panelContainer.style.transform = 'perspective(40rem) rotateY(0deg) rotateX(0deg)';
-      }
+    if (panelContainer.closest('.swiper-slide').classList.contains('swiper-slide-active')) {
+      panelContainer.style.transition = 'transform 0.5s ease-out';
+      panelContainer.style.transform = 'perspective(40rem) rotateY(0deg) rotateX(0deg)';
+    }
   }
 
 
 
-  
+
 
 })
