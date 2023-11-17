@@ -1785,22 +1785,23 @@ header h1 {
     }
 }
 
-.catalogue-tabs button {
+.catalogue-tabs a {
     background: none;
     border: none;
     font-family: "JoannaSansNova";
     font-size: 3.1rem;
     text-transform: uppercase;
     transition: all 0.2s linear;
+    color: #000;
 }
 
 @media (max-width: 500px) {
-    .catalogue-tabs button {
+    .catalogue-tabs a {
         font-size: 1.6rem;
     }
 }
 
-.catalogue-tabs button.--active {
+.catalogue-tabs a.--active {
     -webkit-text-stroke: 0.1rem black;
 }
 

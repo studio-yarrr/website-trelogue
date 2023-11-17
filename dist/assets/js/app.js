@@ -10744,34 +10744,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
-
-  let catalogueTabsContainer = document.querySelector('.catalogue-tabs__container')
-  let catalogueTabsBtns = document.querySelectorAll('.catalogue-tabs button')
-
-  if (catalogueTabsContainer) {
-    catalogueTabsBtns.forEach(e => {
-      e.addEventListener('click', () => {
-        catalogueTabsBtns.forEach(el => el.classList.remove('--active'));
-        e.classList.add('--active');
-        catalogueTabsContainer.classList.add('fading-out');
-
-        setTimeout(() => {
-          catalogueTabsContainer.innerHTML = e.nextElementSibling.innerHTML;
-          catalogueTabsContainer.classList.remove('fading-out');
-          catalogueTabsContainer.classList.add('fading-in');
-
-          setTimeout(() => {
-            catalogueTabsContainer.classList.remove('fading-in');
-          }, 300);
-        }, 300);
-      });
-    });
-
-    catalogueTabsBtns[0].click()
-  }
-
-
   const panels = document.querySelectorAll(".panel");
 
   panels.forEach(panel => {

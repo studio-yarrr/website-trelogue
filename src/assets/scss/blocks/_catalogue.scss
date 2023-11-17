@@ -18,13 +18,14 @@
         padding: 3rem;
     }
 
-    button {
+    a {
         background: none;
         border: none;
         font-family: "JoannaSansNova";
         font-size: 3.1rem;
         text-transform: uppercase;
         transition: all 0.2s linear;
+        color: #000;
 
         @include breakpoint($sm-bp) {
             font-size: 1.6rem;
