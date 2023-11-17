@@ -32,10 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  if (window.matchMedia("(max-width: 500px)").matches) {
+  if (window.matchMedia("(max-width: 500px)").matches && document.querySelector('.split')) {
     document.querySelectorAll('.screen').forEach(e => {
       e.classList.add('swiper-slide')
     })
+    
     document.querySelector('.split').classList.add('swiper-wrapper')
     document.querySelector('.split').parentElement.classList.add('swiper')
     document.querySelector('.split').parentElement.classList.add('split-swiper')
