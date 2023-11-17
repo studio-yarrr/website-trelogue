@@ -17,6 +17,10 @@ header {
 
     &.--for-item {
         margin-top: 6rem;
+
+        @include breakpoint($sm-bp) {
+            margin-top: 3rem;
+        }
     }
 
     h1 {

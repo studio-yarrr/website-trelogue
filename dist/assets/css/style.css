@@ -534,6 +534,12 @@ header.--for-item {
     margin-top: 6rem;
 }
 
+@media (max-width: 500px) {
+    header.--for-item {
+        margin-top: 3rem;
+    }
+}
+
 header h1 {
     color: #000;
     font-size: 12rem;
@@ -924,6 +930,12 @@ header h1 {
 
 .rights.--for-item {
     margin-top: 7.6rem;
+}
+
+@media (max-width: 500px) {
+    .rights.--for-item {
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width: 1024px) {
