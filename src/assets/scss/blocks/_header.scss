@@ -3,7 +3,7 @@ header {
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
-    margin-top: 9rem;
+    margin-top: 8.4rem;
 
     @include breakpoint($xl-bp) {
         margin-top: 6rem;
@@ -15,9 +15,13 @@ header {
         margin-top: 3rem;
     }
 
+    &.--for-item {
+        margin-top: 6rem;
+    }
+
     h1 {
         color: #000;
-        font-size: 9rem;
+        font-size: 12rem;
         text-transform: uppercase;
         line-height: 1;
         font-weight: 800;
@@ -29,6 +33,8 @@ header {
         }
     }
 }
+
+
 
 .header__subtitle {
     font-size: 4rem;

@@ -513,7 +513,7 @@ header {
     gap: 1.5rem;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 9rem;
+    margin-top: 8.4rem;
 }
 
 @media (max-width: 1024px) {
@@ -530,9 +530,13 @@ header {
     }
 }
 
+header.--for-item {
+    margin-top: 6rem;
+}
+
 header h1 {
     color: #000;
-    font-size: 9rem;
+    font-size: 12rem;
     text-transform: uppercase;
     line-height: 1;
     font-weight: 800;
@@ -902,20 +906,24 @@ header h1 {
 }
 
 .rights {
-    margin-top: 10rem;
-    height: 13rem;
+    margin-top: 10.8rem;
+    height: 17rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-clip-path: polygon(0 80%, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 80%, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 69%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 69%, 100% 0, 100% 100%, 0% 100%);
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     -webkit-animation: gradient 15s ease infinite;
     animation: gradient 15s ease infinite;
+}
+
+.rights.--for-item {
+    margin-top: 7.6rem;
 }
 
 @media (max-width: 1024px) {
@@ -1107,7 +1115,7 @@ header h1 {
 }
 
 .main-text {
-    padding: 5rem 11.5rem 5rem 11.5rem;
+    padding: 4rem 11rem 4.5rem 12.7rem;
 }
 
 @media (max-width: 1024px) {
@@ -1157,7 +1165,7 @@ header h1 {
     align-items: center;
     gap: 2rem;
     font-family: "Inter";
-    font-size: 7rem;
+    font-size: 9rem;
     line-height: 100%;
     font-weight: 100;
     background: rgb(235, 235, 236);
@@ -1182,10 +1190,10 @@ header h1 {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.3rem;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding: 3rem 8rem 0rem;
+    padding: 1.7rem 8rem 0rem;
     font-family: "JoannaSansNova";
     font-size: 3rem;
     line-height: 110%;
@@ -1217,7 +1225,7 @@ header h1 {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 6rem;
+    gap: 5.6rem;
     padding: 6rem 9.6rem 0rem;
 }
 
@@ -1235,14 +1243,14 @@ header h1 {
 }
 
 .main-cards__inner {
-    -webkit-transform: rotate(-4deg);
-    transform: rotate(-4deg);
+    -webkit-transform: rotate(-3.5deg);
+    transform: rotate(-3.5deg);
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);
-    -webkit-column-gap: 7rem;
-    -moz-column-gap: 7rem;
-    column-gap: 7rem;
+    -webkit-column-gap: 6.5rem;
+    -moz-column-gap: 6.5rem;
+    column-gap: 6.5rem;
 }
 
 @media (max-width: 1024px) {
@@ -1269,10 +1277,11 @@ header h1 {
 
 .main-cards__inner h2 {
     font-family: "JoannaSansNova";
-    font-size: 3.5rem;
+    font-size: 4.1rem;
     text-transform: uppercase;
     font-weight: 600;
     grid-area: 1/2/2/3;
+    margin-top: 0.6rem;
 }
 
 @media (max-width: 500px) {
@@ -1282,7 +1291,7 @@ header h1 {
 }
 
 .main-cards__inner ul {
-    margin-top: 7rem;
+    margin-top: 6rem;
     grid-area: 4/2/5/3;
 }
 
@@ -1351,9 +1360,9 @@ header h1 {
     font-family: "JoannaSansNova";
     font-size: 3.1rem;
     line-height: 120%;
-    margin-top: 7rem;
+    margin-top: 6.4rem;
     width: 85%;
-    padding-left: 4.5rem;
+    padding-left: 4rem;
     grid-area: 3/2/4/3;
     color: rgba(0, 0, 0, 0.6705882353);
 }
@@ -1472,7 +1481,7 @@ header h1 {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 10rem;
+    gap: 10.3rem;
 }
 
 @media (max-width: 1024px) {
@@ -1504,11 +1513,12 @@ header h1 {
     font-family: "JoannaSansNova";
     font-size: 3.1rem;
     line-height: 120%;
-    padding-left: 5rem;
+    padding-left: 3.7rem;
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 2rem;
     color: rgba(0, 0, 0, 0.6705882353);
+    letter-spacing: 0.014rem;
 }
 
 @media (max-width: 500px) {
@@ -1532,7 +1542,7 @@ header h1 {
     font-family: "JoannaSansNova";
     font-size: 3.1rem;
     line-height: 120%;
-    margin-top: 7rem;
+    margin-top: 5.9rem;
 }
 
 @media (max-width: 500px) {
@@ -1553,7 +1563,7 @@ header h1 {
     position: relative;
     width: 100%;
     height: 67rem;
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 @media (max-width: 1024px) {
@@ -1733,10 +1743,10 @@ header h1 {
 }
 
 .catalogue-tabs {
-    padding: 9rem 8rem 4rem 8rem;
+    padding: 7.5rem 8rem 3.8rem 8rem;
     display: -ms-flexbox;
     display: flex;
-    gap: 7rem;
+    gap: 6.2rem;
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-align: center;
