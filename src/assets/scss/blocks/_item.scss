@@ -18,7 +18,7 @@
 
     h2 {
         font-family: "JoannaSansNova";
-        font-size: 3.2rem;
+        font-size: 4.1rem;
         text-transform: uppercase;
         font-weight: 600;
         grid-area: 1 / 2 / 2 / 3;
@@ -46,18 +46,19 @@
     font-family: "JoannaSansNova";
     display: flex;
     align-items: end;
-    font-size: 2.3rem;
+    font-size: 3.1rem;
     grid-area: 2 / 2 / 3 / 3;
 
     @include breakpoint($sm-bp) {
         font-size: 1.2rem;
+        margin-top: 2rem;
     }
 }
 
 .item-article__text {
     display: flex;
     font-family: "JoannaSansNova";
-    font-size: 2.4rem;
+    font-size: 3.1rem;
     line-height: 120%;
     padding-left: 5rem;
     flex-direction: column;
@@ -82,9 +83,9 @@
 .item-article__questions {
     display: flex;
     font-family: "JoannaSansNova";
-    font-size: 2.4rem;
+    font-size: 3.1rem;
     line-height: 120%;
-    margin-top: 8rem;
+    margin-top: 7rem;
 
     @include breakpoint($sm-bp) {
         text-align: end;

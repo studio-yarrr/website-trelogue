@@ -10810,8 +10810,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
-
-
-
 })

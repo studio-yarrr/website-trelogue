@@ -22,7 +22,7 @@ header {
         line-height: 1;
         font-weight: 800;
         letter-spacing: -0.4rem;
-        font-family: "JoannaSansNova";
+        font-family: "Wix Madefor Display";
 
         @include breakpoint($sm-bp) {
             font-size: 6rem;
@@ -32,9 +32,11 @@ header {
 
 .header__subtitle {
     font-size: 4rem;
-    font-weight: 400;
+    font-weight: 300;
     display: flex;
     gap: 2rem;
+    font-family: "Inter";
+    line-height: 100%;
 
     @include breakpoint($sm-bp) {
         gap: 1rem;
