@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.screen').forEach(e => {
       e.classList.add('swiper-slide')
     })
-    
+
     document.querySelector('.split').classList.add('swiper-wrapper')
     document.querySelector('.split').parentElement.classList.add('swiper')
     document.querySelector('.split').parentElement.classList.add('split-swiper')
@@ -72,16 +72,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   let ulElement = document.querySelector('.header__subtitle ul');
-  let liCount = ulElement.querySelectorAll('li').length;
+  if (ulElement) {
+    let liCount = ulElement.querySelectorAll('li').length;
 
-  ulElement.classList.remove('flip2', 'flip3', 'flip4', 'flip5');
+    ulElement.classList.remove('flip2', 'flip3', 'flip4', 'flip5');
 
-  switch (liCount) {
-    case 2: ulElement.classList.add('flip2'); break;
-    case 3: ulElement.classList.add('flip3'); break;
-    case 4: ulElement.classList.add('flip4'); break;
-    default: ulElement.classList.add('flip5'); break;
+    switch (liCount) {
+      case 2: ulElement.classList.add('flip2'); break;
+      case 3: ulElement.classList.add('flip3'); break;
+      case 4: ulElement.classList.add('flip4'); break;
+      default: ulElement.classList.add('flip5'); break;
+    }
   }
+
 
 
   let catalogueTabsContainer = document.querySelector('.catalogue-tabs__container')
